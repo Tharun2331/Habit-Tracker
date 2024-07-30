@@ -4,27 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".fragment_home">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/orange"
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="177dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:text="Habit Tracker"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Habit Tracker" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/FLfragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <Spinner
+        android:id="@+id/spinner_habits"
+        android:layout_width="370dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_add_habit"
+        android:layout_width="343dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:text="Add Habit"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_habits" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_habits"
+        android:layout_width="423dp"
+        android:layout_height="471dp"
+        android:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/button_add_habit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
